@@ -1,0 +1,147 @@
+:root {
+    --bg-color: antiquewhite;
+    --typewriterSpeed: 6s;
+    --typewriterCharacters: 13;
+}
+p, h2, h3, h4 {
+    color: black;
+}
+h1 {
+        font-size: clamp(1rem, 3vw + 1rem, 4rem);
+        position: relative;
+        font-family: "Source Code Pro", monospace;
+        position: relative;
+        width: max-content;
+        margin-bottom: 200px;
+}
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h1::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+h1::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    
+}
+p,li{
+    font-size: 1.5em;
+    font-family: 'Saira Condensed', sans-serif;
+}
+h2, h3, h4,li{
+    text-align: center;
+}
+h2, h3, h4{
+    font-size: 3em;
+    font-family: 'Saira Condensed', sans-serif;
+}
+li{list-style-type: none;}
+body{
+    background: antiquewhite
+}
+body{
+    margin: 50px;
+}
+a:hover{
+    text-decoration: none;
+    font-size:larger;
+    transform: all 2s;
+}
+a:focus{
+    background-color: antiquewhite;
+}
+nav{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 2em;
+    margin-bottom: 150px;
+    margin-top: 150px;
+}
+.bouton {
+display: flex;
+justify-content: space-between;
+}
+.element{
+    margin: auto;
+    display: block;
+    width: 200px;
+    height: 50px;
+    background:antiquewhite;
+    font-size:28px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    transition:all 1s;
+    text-align: center;
+}
+.data-container{
+  background:#ffebee;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.element:hover{
+    opacity: 75%;
+    text-decoration: underline;
+    width: 300px;
+    height: 100px;
+    transition: all 2s;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px black;
+}
+nav a{
+    color: #203A43;
+}
+span:hover{
+    opacity: 50%;
+    text-decoration: underline;
+    cursor: pointer;
+}
+span{
+    font-weight: 600;
+}
+footer{
+    margin-top: 150px;
+    text-align: end;
+}
+@media screen and (max-width: 1200px) {
+    img{
+        flex-direction: column;
+    }
+    }
+    @keyframes typewriter {
+        to {
+          left: 100%;
+        }
+      }
+      
+      @keyframes blink {
+        to {
+          background: transparent;
+        }
+      }
+      
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
